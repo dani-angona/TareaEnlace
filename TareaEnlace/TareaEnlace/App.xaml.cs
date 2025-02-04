@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Ejercicio1
+namespace TareaEnlace
 {
     /// <summary>
     /// Lógica de interacción para App.xaml

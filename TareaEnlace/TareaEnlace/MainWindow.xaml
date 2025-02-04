@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TareaEnlace"
         mc:Ignorable="d"
-        Title="Tarea Enlace" Height="450" Width="800">
+        Title="Tarea Enlace" Height="250" Width="400">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Nombre:" VerticalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Column="1" Name="txtNombre" Width="200" Margin="10"
+                 TextChanged="TextChanged_UpdateUI"/>
+
+        <TextBlock Grid.Row="1" Text="Teléfono:" VerticalAlignment="Center" Margin="10"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtTelefono" Width="200" Margin="10"
+                 TextChanged="TextChanged_UpdateUI"/>
+
+
+        <TextBlock Grid.Row="2" Text="Vista Previa:" FontWeight="Bold" Margin="10"/>
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
+            <TextBlock Name="lblNombrePreview" FontSize="14"/>
+            <TextBlock Name="lblTelefonoPreview" FontSize="14"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" Grid.Column="1" Name="btnGuardar" Content="GUARDAR"
+                Width="200" Margin="10" Click="GuardarEnXML" IsEnabled="False"/>
     </Grid>
 </Window>
